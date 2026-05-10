@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klasik Yılan Oyunu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-labelledby="game-title">
+      <section class="hero">
+        <p class="eyebrow">Retro Arcade</p>
+        <h1 id="game-title">Klasik Yılan Oyunu</h1>
+        <p class="intro">
+          Yılanı yönlendir, yemleri topla ve duvarlara ya da kendi kuyruğuna çarpmadan
+          en yüksek skoru yakala.
+        </p>
+      </section>
+
+      <section class="scoreboard" aria-label="Skor bilgileri">
+        <div>
+          <span class="label">Skor</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">En İyi</span>
+          <strong id="best-score">0</strong>
+        </div>
+        <div>
+          <span class="label">Hız</span>
+          <strong id="speed">1x</strong>
+        </div>
+      </section>
+
+      <div class="board-wrap">
+        <canvas id="game-board" width="480" height="480" aria-label="Yılan oyun alanı"></canvas>
+        <div id="overlay" class="overlay">
+          <h2>Başlamak için hazır mısın?</h2>
+          <p>Ok tuşları veya WASD ile yön değiştir. Mobilde alttaki düğmeleri kullan.</p>
+          <button id="start-button" type="button">Oyunu Başlat</button>
+        </div>
+      </div>
+
+      <section class="controls" aria-label="Mobil kontroller">
+        <button class="control-btn" type="button" data-direction="up" aria-label="Yukarı">▲</button>
+        <div>
+          <button class="control-btn" type="button" data-direction="left" aria-label="Sol">◀</button>
+          <button class="control-btn" type="button" data-direction="down" aria-label="Aşağı">▼</button>
+          <button class="control-btn" type="button" data-direction="right" aria-label="Sağ">▶</button>
+        </div>
+      </section>
+
+      <p class="hint">Duraklatmak veya devam etmek için <kbd>Space</kbd> tuşuna bas.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
